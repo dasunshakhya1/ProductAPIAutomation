@@ -15,7 +15,7 @@ A **C# API Test Automation framework** built with:
 ### Clone the Repository
 ```bash
 git clone https://github.com/dasunshakhya1/ProductAPIAutomation.git
-cd APIAutomation
+cd ProductAPIAutomation
 ```
 
 ### Tests directories
