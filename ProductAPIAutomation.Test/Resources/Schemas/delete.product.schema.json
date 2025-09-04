@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DeleteMessage",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "Object with id = 6, has been deleted."
+    }
+  },
+  "required": [ "message" ]
+}

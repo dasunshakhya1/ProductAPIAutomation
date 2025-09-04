@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Product List",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[0-9]+$"
+      },
+      "name": {
+        "type": "string"
+      },
+      "data": {
+        "anyOf": [
+          { "type": "null" },
+          {
+            "type": "object",
+            "properties": {
+              "color": { "type": "string" },
+              "Color": { "type": "string" },
+              "capacity": { "type": "string" },
+              "capacity GB": { "type": "integer" },
+              "Capacity": { "type": "string" },
+              "price": { "type": "number" },
+              "Price": { "type": "string" },
+              "generation": { "type": "string" },
+              "Generation": { "type": "string" },
+              "year": { "type": "integer" },
+              "CPU model": { "type": "string" },
+              "Hard disk size": { "type": "string" },
+              "Strap Colour": { "type": "string" },
+              "Case Size": { "type": "string" },
+              "Description": { "type": "string" },
+              "Screen size": { "type": "number" }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "required": [ "id", "name", "data" ],
+    "additionalProperties": false
+  }
+}
