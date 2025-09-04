@@ -15,7 +15,7 @@ namespace ProductAPIAutomation.Test.E2E
         private static Product updatedProduct;
 
         [Fact, TestPriority(1)]
-        public async Task Test_GetProducts_ReturnsAtLeastOneProduct()
+        public async Task TestGetProductsReturnsAtLeastOneProduct()
         {
             string schemaJson = "get.products.schema.json";
             string productJson = "products.json";
@@ -34,7 +34,7 @@ namespace ProductAPIAutomation.Test.E2E
 
 
         [Fact, TestPriority(2)]
-        public async Task Test_AddProduct_ReturnsCreatedProduct()
+        public async Task TestAddProductReturnsCreatedProduct()
         {
             ProductData productData = new(2025, 2200.25, "Intel Core i12", "1 TB");
             Product product = new("Apple MacBook Pro 17", productData);
@@ -54,7 +54,7 @@ namespace ProductAPIAutomation.Test.E2E
 
 
         [Fact, TestPriority(3)]
-        public async Task Test_GetProductById_ReturnsAProductByValidId()
+        public async Task TestGetProductByIdReturnsProductForValidId()
         {
 
             string schemaJson = "get.product.schema.json";
@@ -71,7 +71,7 @@ namespace ProductAPIAutomation.Test.E2E
 
 
         [Fact, TestPriority(4)]
-        public async Task Test_UpdateProduct_ReturnsUpdatedProduct()
+        public async Task TestUpdateProductReturnsUpdatedProduct()
         {
             ProductData productData = new(2025, 2200.25, "Intel Core i12", "1 TB");
             Product product = new("Apple MacBook Pro 17 Plus", productData);
@@ -91,7 +91,7 @@ namespace ProductAPIAutomation.Test.E2E
 
 
         [Fact, TestPriority(5)]
-        public async Task Test_GetProductById_ReturnsUpdatedProduct()
+        public async Task TestGetProductByIdReturnsUpdatedProduct()
         {
             string schemaJson = "get.product.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);
@@ -107,7 +107,7 @@ namespace ProductAPIAutomation.Test.E2E
 
 
         [Fact, TestPriority(6)]
-        public async Task Test_DeleteProductById_ReturnsProductDelete()
+        public async Task TestDeleteProductByIdReturnsProductDeleted()
         {
             string schemaJson = "delete.product.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);
@@ -124,7 +124,7 @@ namespace ProductAPIAutomation.Test.E2E
 
 
         [Fact, TestPriority(7)]
-        public async Task Test_GetProductById_ReturnsProductNotFoundError()
+        public async Task TestGetProductByIdReturnsProductNotFoundError()
         {
             string schemaJson = "error.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);

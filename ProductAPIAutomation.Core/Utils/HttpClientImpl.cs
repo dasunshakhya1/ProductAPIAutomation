@@ -7,7 +7,7 @@ namespace ProductAPIAutomation.Core.Utils
     public class HttpClientImpl
     {
 
-        private static readonly RestClientOptions options = new(ApplicationConfigs.BASE_URL);
+        private static readonly RestClientOptions options = new(ApplicationConfigs.BASEURL);
         private static readonly RestClient client = new(options);
 
 

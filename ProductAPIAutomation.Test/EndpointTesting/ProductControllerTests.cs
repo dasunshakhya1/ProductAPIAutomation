@@ -24,7 +24,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
 
 
         [Fact]
-        public async Task Test_GetProducts_ReturnsAtLeastOneProduct()
+        public async Task TestGetProductsReturnsAtLeastOneProduct()
         {
             string schemaJson = "get.products.schema.json";
             string productJson = "products.json";
@@ -43,7 +43,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
 
 
         [Fact]
-        public async Task Test_GetProductById_ReturnsAProductByValidId()
+        public async Task TestGetProductByIdReturnsAProductByValidId()
         {
 
             string schemaJson = "get.product.schema.json";
@@ -62,7 +62,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
 
 
         [Fact]
-        public async Task Test_GetProductById_ReturnsAnErrorForNonExistingId()
+        public async Task TestGetProductByIdReturnsAnErrorForNonExistingId()
         {
             string schemaJson = "error.schema.json";
             string productJson = "error.json";
@@ -81,7 +81,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
 
 
         [Fact]
-        public async Task Test_AddProduct_ReturnsCreatedProduct()
+        public async Task TestAddProductReturnsCreatedProduct()
         {
             string schemaJson = "add.product.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);
@@ -97,7 +97,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
         }
 
         [Fact]
-        public async Task Test_UpdateProduct_ReturnsUpdatedProduct()
+        public async Task TestUpdateProductReturnsUpdatedProduct()
         {
             string schemaJson = "update.product.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);
@@ -118,7 +118,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
 
 
         [Fact]
-        public async Task Test_UpdateProduct_ReturnsAnErrorUpdateingNonExistingProduct()
+        public async Task TestUpdateProductReturnsAnErrorUpdateingNonExistingProduct()
         {
             string schemaJson = "error.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);
@@ -134,7 +134,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
 
 
         [Fact]
-        public async Task Test_UpdateProduct_ReturnsPartiallyUpdatedProduct()
+        public async Task TestUpdateProductReturnsPartiallyUpdatedProduct()
         {
             string schemaJson = "update.product.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);
@@ -156,7 +156,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
 
 
         [Fact]
-        public async Task Test_UpdateProduct_ReturnsAnErrorPartiallyUpdateingNonExistingProduct()
+        public async Task TestUpdateProductReturnsAnErrorPartiallyUpdateingNonExistingProduct()
         {
             string schemaJson = "error.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);
@@ -172,7 +172,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
 
 
         [Fact]
-        public async Task Test_DeleteProductById_ReturnsProductDelete()
+        public async Task TestDeleteProductByIdReturnsProductDelete()
         {
             string schemaJson = "delete.product.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);
@@ -192,7 +192,7 @@ namespace ProductAPIAutomation.Test.EndpointTesting
 
 
         [Fact]
-        public async Task Test_UpdateProduct_DeleteNonExistingProduct()
+        public async Task TestUpdateProductDeleteNonExistingProduct()
         {
             string schemaJson = "error.schema.json";
             string expectedSchema = await FileReader.GetSchema(schemaJson);

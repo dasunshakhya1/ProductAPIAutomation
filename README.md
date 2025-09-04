@@ -18,6 +18,10 @@ git clone https://github.com/dasunshakhya1/ProductAPIAutomation.git
 cd APIAutomation
 ```
 
+### Tests directories
+- E2E -> ProductAPIAutomation.Test > E2E
+- Endpoint tests -> ProductAPIAutomation.Test > EndpointTesting
+
 ###  Run tests
 ```bash
 Runner.bat
