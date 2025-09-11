@@ -13,6 +13,8 @@ variables:
   solution : "**/*ProductAPIAutomation.sln"
 
 steps:
+- task: NuGetToolInstaller@1
+  name: "InstallTools"
 - task: NuGetCommand@2
   name: "RestoreDependencies"
   inputs:
